@@ -5,7 +5,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://ecocart-voice-ai.onrender.com/api/:path*"
+      "destination": "https://echocart-qzid.onrender.com/api/:path*"
     },
     {
       "source": "/(.*)",
