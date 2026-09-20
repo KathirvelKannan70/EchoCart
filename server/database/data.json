@@ -1,0 +1,276 @@
+{
+  "merchants": [
+    {
+      "id": "merchant_streetwear",
+      "name": "UrbanKicks & Apparel",
+      "domain": "urbankicks-india.myshopify.com",
+      "industry": "Fashion & Streetwear",
+      "defaultLanguage": "Hinglish",
+      "currency": "INR",
+      "systemPromptTemplate": "You are Aanya, a friendly and energetic voice customer specialist for {{merchant_name}}. \nYour goal is to call {{customer_name}} to confirm their order or help them complete their abandoned checkout for {{items}}.\n\nContext:\n- Customer Name: {{customer_name}}\n- Items in cart: {{items}}\n- Subtotal: {{subtotal}}\n- Discount applied: {{discount_code}} (Saved {{discount_amount}})\n- Final Payable Price: {{final_price}}\n- Payment Method: {{payment_method}}\n- Language preference: {{language}}\n\nRules for Voice Speech:\n1. Keep sentences short and conversational (max 15 words per turn).\n2. DO NOT use markdown, bullet points, or special characters like #, *, or symbols like ₹ (say \"rupees\" explicitly).\n3. Insert natural pauses using commas and ellipses.\n4. If Hinglish is preferred, use natural conversational Hinglish (e.g., \"Aapka order complete karne ke liye bas ek final confirmation chahiye\").\n5. Offer discount code {{discount_code}} if the customer hesitates due to price.\n6. Always end with a clear question (e.g. \"Kya main aapka Cash on Delivery order confirm kar doon?\").",
+      "activeDiscountCode": "GO100",
+      "discountValue": "₹100 OFF",
+      "codAvailable": true
+    },
+    {
+      "id": "merchant_electronics",
+      "name": "VoltGear Tech Solutions",
+      "domain": "voltgear-store.myshopify.com",
+      "industry": "Consumer Electronics",
+      "defaultLanguage": "English",
+      "currency": "INR",
+      "systemPromptTemplate": "You are Alex, an expert product assistant from {{merchant_name}}.\nYou are reaching out to {{customer_name}} regarding their checkout for {{items}}.\n\nContext:\n- Customer Name: {{customer_name}}\n- Items: {{items}}\n- Final Payable Price: {{final_price}}\n- Discount Code: {{discount_code}}\n- Payment Mode: {{payment_method}}\n\nRules for Voice Speech:\n1. Maintain a professional, crisp, and helpful tone.\n2. Address warranty or shipping questions concisely.\n3. Pronounce prices clearly in words (e.g. \"three thousand four hundred and ninety-nine rupees\").\n4. Confirm shipping address and preferred delivery time window.",
+      "activeDiscountCode": "TECH10",
+      "discountValue": "10% OFF",
+      "codAvailable": false
+    },
+    {
+      "id": "merchant_wellness",
+      "name": "Aura Ayurveda & Glow",
+      "domain": "aura-ayurveda.myshopify.com",
+      "industry": "Beauty & Wellness",
+      "defaultLanguage": "Hinglish",
+      "currency": "INR",
+      "systemPromptTemplate": "You are Priya from {{merchant_name}}. Call {{customer_name}} warmly to assist with their skincare routine purchase of {{items}}.\n\nContext:\n- Customer: {{customer_name}}\n- Products: {{items}}\n- Total Price: {{final_price}}\n- Special Offer: {{discount_code}}\n\nVoice Rules:\n1. Warm, empathetic tone.\n2. Highlight natural organic ingredients briefly.\n3. Keep turns under 2 sentences.",
+      "activeDiscountCode": "GLOW15",
+      "discountValue": "15% OFF",
+      "codAvailable": true
+    }
+  ],
+  "abandonedCheckouts": [
+    {
+      "id": "chk_98214",
+      "shopifyId": "gid://shopify/Checkout/98214",
+      "customerName": "Rohan Sharma",
+      "phone": "+919876543210",
+      "email": "rohan.sharma@example.com",
+      "language": "Hinglish",
+      "city": "Mumbai",
+      "items": [
+        {
+          "title": "Oversized Anime Hoodie - Midnight Black",
+          "quantity": 1,
+          "price": 1799
+        }
+      ],
+      "subtotal": 1799,
+      "discountCode": "GO100",
+      "discountAmount": 100,
+      "tax": 0,
+      "shipping": 0,
+      "totalPrice": 1699,
+      "paymentMethod": "Cash on Delivery",
+      "createdAt": "2026-09-20T04:16:05.250Z",
+      "merchantId": "merchant_streetwear",
+      "status": "abandoned",
+      "callStatus": "in_progress"
+    },
+    {
+      "id": "chk_98215",
+      "shopifyId": "gid://shopify/Checkout/98215",
+      "customerName": "Ananya Verma",
+      "phone": "+919812345678",
+      "email": "ananya.v@example.com",
+      "language": "English",
+      "city": "Bengaluru",
+      "items": [
+        {
+          "title": "ANC Wireless Noise Cancelling Earbuds",
+          "quantity": 1,
+          "price": 3499
+        }
+      ],
+      "subtotal": 3499,
+      "discountCode": "TECH10",
+      "discountAmount": 350,
+      "tax": 0,
+      "shipping": 0,
+      "totalPrice": 3149,
+      "paymentMethod": "Prepaid (UPI / Card)",
+      "createdAt": "2026-09-20T02:51:05.251Z",
+      "merchantId": "merchant_electronics",
+      "status": "abandoned",
+      "callStatus": "completed"
+    },
+    {
+      "id": "chk_98216",
+      "shopifyId": "gid://shopify/Checkout/98216",
+      "customerName": "Pooja Hegde",
+      "phone": "+919988776655",
+      "email": "pooja.hegde@example.com",
+      "language": "Hinglish",
+      "city": "Delhi",
+      "items": [
+        {
+          "title": "Kumkumadi Radiance Face Serum (30ml)",
+          "quantity": 2,
+          "price": 899
+        }
+      ],
+      "subtotal": 1798,
+      "discountCode": "GLOW15",
+      "discountAmount": 270,
+      "tax": 0,
+      "shipping": 0,
+      "totalPrice": 1528,
+      "paymentMethod": "Cash on Delivery",
+      "createdAt": "2026-09-20T04:36:05.251Z",
+      "merchantId": "merchant_wellness",
+      "status": "abandoned",
+      "callStatus": "pending"
+    }
+  ],
+  "calls": [
+    {
+      "id": "call_865424",
+      "checkoutId": "chk_98214",
+      "merchantId": "merchant_streetwear",
+      "customerName": "Rohan Sharma",
+      "phone": "+919876543210",
+      "startTime": "2026-09-20T04:51:05.424Z",
+      "durationSeconds": 0,
+      "outcome": "in_progress",
+      "outcomeReason": "Call initiated",
+      "orderValue": 1699,
+      "flagged": false,
+      "flagReason": null,
+      "context": {
+        "checkoutId": "chk_98214",
+        "merchantId": "merchant_streetwear",
+        "merchantName": "UrbanKicks & Apparel",
+        "customerName": "Rohan Sharma",
+        "phone": "+919876543210",
+        "city": "Mumbai",
+        "language": "Hinglish",
+        "items": "Oversized Anime Hoodie - Midnight Black",
+        "itemsRaw": [
+          {
+            "title": "Oversized Anime Hoodie - Midnight Black",
+            "quantity": 1,
+            "price": 1799
+          }
+        ],
+        "subtotal": 1799,
+        "subtotalDisplay": "₹1,799",
+        "subtotalSpoken": "one thousand seven hundred and ninety-nine rupees",
+        "discountCode": "GO100",
+        "discountAmount": 100,
+        "discountAmountDisplay": "₹100",
+        "discountAmountSpoken": "one hundred rupees",
+        "finalPrice": 1699,
+        "finalPriceDisplay": "₹1,699",
+        "finalPriceSpoken": "one thousand six hundred and ninety-nine rupees",
+        "paymentMethod": "Cash on Delivery",
+        "isCod": true
+      },
+      "systemPrompt": "You are Aanya, a friendly and energetic voice customer specialist for UrbanKicks & Apparel. \nYour goal is to call Rohan Sharma to confirm their order or help them complete their abandoned checkout for Oversized Anime Hoodie - Midnight Black.\n\nContext:\n- Customer Name: Rohan Sharma\n- Items in cart: Oversized Anime Hoodie - Midnight Black\n- Subtotal: one thousand seven hundred and ninety-nine rupees\n- Discount applied: GO100 (Saved one hundred rupees)\n- Final Payable Price: one thousand six hundred and ninety-nine rupees\n- Payment Method: Cash on Delivery\n- Language preference: Hinglish\n\nRules for Voice Speech:\n1. Keep sentences short and conversational (max 15 words per turn).\n2. DO NOT use markdown, bullet points, or special characters like #, *, or symbols like ₹ (say \"rupees\" explicitly).\n3. Insert natural pauses using commas and ellipses.\n4. If Hinglish is preferred, use natural conversational Hinglish (e.g., \"Aapka order complete karne ke liye bas ek final confirmation chahiye\").\n5. Offer discount code GO100 if the customer hesitates due to price.\n6. Always end with a clear question (e.g. \"Kya main aapka Cash on Delivery order confirm kar doon?\").\n\n--- CRITICAL VOICE & TTS PACING MANDATES ---\n1. You are speaking over a live voice phone call. Write EXACTLY as spoken speech.\n2. STRICTLY NO MARKDOWN (no asterisks *, no bullet points, no bold, no # headers).\n3. Do NOT use raw currency symbols like ₹ or $. Always write out words like \"rupees\" or \"dollars\".\n4. Write numbers as words or phonetically clear digits (e.g. write \"fifteen hundred\" or \"one thousand five hundred\", NOT \"1500\").\n5. Keep turns short: maximum 1 to 2 sentences per speech turn.\n6. Insert natural pause markers using commas (,) and ellipses (...) to allow natural neural TTS breathing.\n7. Language preference: Hinglish. If Hinglish, switch seamlessly between natural Hindi and English without awkward formal translations.",
+      "turns": [
+        {
+          "speaker": "agent",
+          "text": "Namaste Rohan...... Sharma... Main UrbanKicks & Apparel se bol rahi hoon. Aapka Oversized Anime Hoodie - Midnight Black cart mein ruka hua hai. Kya main aapka Cash on Delivery order confirm kar doon?",
+          "timestamp": "00:02"
+        }
+      ]
+    },
+    {
+      "id": "call_101",
+      "checkoutId": "chk_98215",
+      "merchantId": "merchant_electronics",
+      "customerName": "Ananya Verma",
+      "phone": "+919812345678",
+      "startTime": "2026-09-20T03:51:05.251Z",
+      "durationSeconds": 74,
+      "outcome": "recovered",
+      "outcomeReason": "Customer confirmed order after 10% discount code explanation",
+      "orderValue": 3149,
+      "flagged": false,
+      "flagReason": null,
+      "turns": [
+        {
+          "speaker": "agent",
+          "text": "Hi Ananya! I noticed you left the ANC Wireless Earbuds in your cart at VoltGear. Is there anything I can help you with to complete your order?",
+          "timestamp": "00:03"
+        },
+        {
+          "speaker": "customer",
+          "text": "Yeah, I was wondering if the 10 percent discount code is still valid for UPI payments?",
+          "timestamp": "00:15"
+        },
+        {
+          "speaker": "agent",
+          "text": "Yes! Code TECH10 gives you ten percent off, making your total three thousand one hundred and forty-nine rupees with free delivery.",
+          "timestamp": "00:24"
+        },
+        {
+          "speaker": "customer",
+          "text": "Awesome, can you place the order for me or send a quick payment link?",
+          "timestamp": "00:45"
+        },
+        {
+          "speaker": "agent",
+          "text": "I have sent the instant payment link directly to your phone via SMS. Thank you for choosing VoltGear!",
+          "timestamp": "00:58"
+        }
+      ]
+    },
+    {
+      "id": "call_102",
+      "checkoutId": "chk_98214",
+      "merchantId": "merchant_streetwear",
+      "customerName": "Rohan Sharma",
+      "phone": "+919876543210",
+      "startTime": "2026-09-20T01:51:05.251Z",
+      "durationSeconds": 52,
+      "outcome": "flagged_issue",
+      "outcomeReason": "TTS misread price symbol symbol as raw string",
+      "orderValue": 1699,
+      "flagged": true,
+      "flagReason": "TTS Engine pronounced ₹1,699 as \"question mark one comma six nine nine\". Need phonetic rule update.",
+      "turns": [
+        {
+          "speaker": "agent",
+          "text": "Namaste Rohan! Main UrbanKicks se Aanya bol rahi hoon. Aapka Oversized Anime Hoodie cart mein ruka hua hai.",
+          "timestamp": "00:02"
+        },
+        {
+          "speaker": "customer",
+          "text": "Haan wo final kitne ka padega COD pe?",
+          "timestamp": "00:12"
+        },
+        {
+          "speaker": "agent",
+          "text": "Aapka final price ₹1,699 hai aur 100 rupees discount already applied hai.",
+          "timestamp": "00:22"
+        },
+        {
+          "speaker": "customer",
+          "text": "Samjh nahi aaya, kitna bole aap?",
+          "timestamp": "00:30"
+        }
+      ]
+    }
+  ],
+  "ttsComparisons": [
+    {
+      "id": "tts_1",
+      "title": "Currency Symbol & Price Phonetics",
+      "before": "Your total amount is ₹1,499 with free COD delivery.",
+      "after": "Your total amount is one thousand four hundred and ninety-nine rupees, with free cash on delivery.",
+      "explanation": "TTS mispronounced raw currency symbol ₹ as punctuation or \"Rupees one four nine nine\". Fixed by converting digits to natural spelled-out numbers and explicit spoken words."
+    },
+    {
+      "id": "tts_2",
+      "title": "Speech Pacing & Breath Markers",
+      "before": "Hi Rohan your cart with Oversized Hoodie for rupees 1699 is pending do you want to confirm Cash on delivery now?",
+      "after": "Hi Rohan... I saw your cart with the Oversized Hoodie for sixteen ninety-nine rupees is waiting... Should I confirm your cash on delivery order now?",
+      "explanation": "Continuous unpunctuated text caused TTS to sound robotic and out of breath. Adding ellipses (...) and short clause breaks gives the neural voice natural pause intervals."
+    },
+    {
+      "id": "tts_3",
+      "title": "Hinglish Code-Switching Accent Tuning",
+      "before": "Aapka order confirmation total rupee 1200 COD confirm karein.",
+      "after": "Aapka order confirmation total... twelve hundred rupees hai. Kya COD order confirm kar doon?",
+      "explanation": "Mixed language without clear English phonetic boundaries confused the Indian accent TTS model. Restructuring sentence order improved intelligibility by 85%."
+    }
+  ]
+}
